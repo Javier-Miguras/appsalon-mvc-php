@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.seccion{
+    padding: 5rem 0;
+    display: none;
+
+    .text-center{
+        text-align: center;
+    }
+}
+.mostrar{
+    display: block;
+}
+.ocultar{
+    display: none;
+}
+
+.barra{
+    padding: 1rem 0 2rem 0;
+    @include m.tablet {
+        padding: 0 0 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    span{
+        color: v.$azul;
+        font-weight: v.$bold;
+    }
+    .boton{
+        @include m.boton(v.$lightNegro, v.$blanco);
+    }
+}
